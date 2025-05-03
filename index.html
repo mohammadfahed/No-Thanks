@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free online barcode scanner that identifies product origin countries. Works directly in your browser with your device camera.">
+    <meta name="keywords" content="barcode scanner, product origin, country lookup, online scanner, barcode reader">
+    <meta name="author" content="BarcodeScan Pro">
+    <title>BarcodeScan Pro | Scan & Identify Product Origins</title>
+    <link rel="canonical" href="https://www.yourdomain.com/barcode-scanner">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="BarcodeScan Pro | Scan & Identify Product Origins">
+    <meta property="og:description" content="Free online barcode scanner that identifies where products come from using your device camera.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.yourdomain.com/barcode-scanner">
+    <meta property="og:image" content="https://www.yourdomain.com/images/barcode-scanner-preview.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Barcode Scanner Library -->
+    <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-barcode"></i>
+                <h1>BarcodeScan Pro</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Top Ad Banner -->
+    <div class="ad-banner top-banner">
+        <!-- AdSense Code -->
+        <script async src="https://pagead2.googlesyndicator.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUBLISHER_ID"
+            crossorigin="anonymous"></script>
+        <!-- BarcodeScanner_Top_Banner -->
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-YOUR_PUBLISHER_ID"
+            data-ad-slot="YOUR_AD_SLOT_ID"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <section class="scanner-section">
+                <h2>Scan a Barcode</h2>
+                <p>Point your camera at a barcode to identify the product's country of origin</p>
+                
+                <div class="scanner-container">
+                    <div class="scanner-ui">
+                        <div class="camera-container">
+                            <video id="camera" playsinline></video>
+                            <canvas id="scanner-canvas" style="display: none;"></canvas>
+                            <div class="scan-line"></div>
+                        </div>
+                        <div class="scanner-controls">
+                            <button id="start-scan" class="btn primary">
+                                <i class="fas fa-camera"></i> Start Scanner
+                            </button>
+                            <button id="stop-scan" class="btn secondary" disabled>
+                                <i class="fas fa-stop"></i> Stop
+                            </button>
+                            <select id="camera-select" class="camera-select">
+                                <option value="">Select Camera</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="results-container" id="results">
+                        <div class="placeholder">
+                            <i class="fas fa-barcode"></i>
+                            <p>Scan results will appear here</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Middle Ad Banner -->
+            <div class="ad-banner middle-banner">
+                <!-- AdSense Code -->
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUBLISHER_ID"
+                    crossorigin="anonymous"></script>
+                <!-- BarcodeScanner_Middle_Banner -->
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-YOUR_PUBLISHER_ID"
+                    data-ad-slot="YOUR_AD_SLOT_ID"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            
+            <section id="how-it-works" class="how-it-works">
+                <h2>How It Works</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <i class="fas fa-camera"></i>
+                        <h3>Point Your Camera</h3>
+                        <p>Allow camera access and point at a barcode</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <i class="fas fa-barcode"></i>
+                        <h3>Automatic Scan</h3>
+                        <p>Our system will detect and read the barcode</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <i class="fas fa-globe"></i>
+                        <h3>Get Origin Info</h3>
+                        <p>See the product's country of origin</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BarcodeScan Pro</h3>
+                    <p>The most advanced free online barcode scanner with product origin detection.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; <span id="current-year"></span> BarcodeScan Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "BarcodeScan Pro",
+        "url": "https://www.yourdomain.com/barcode-scanner",
+        "description": "Free online barcode scanner that identifies product origin countries using your device camera.",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "Web Browser",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "creator": {
+            "@type": "Organization",
+            "name": "BarcodeScan Pro"
+        }
+    }
+    </script>
+</body>
+</html>
